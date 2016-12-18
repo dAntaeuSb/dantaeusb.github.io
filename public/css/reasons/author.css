@@ -1,0 +1,26 @@
+#author-placeholder {
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+#author-placeholder .author-content-wrap {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 20px 0;
+  width: 100%;
+}
+#author-placeholder .author-identity {
+  font-size: 48px;
+  text-align: right;
+  line-height: 1.5;
+}
+#author-placeholder .author-identity .author-name {
+  background: #cbc1b7;
+  color: #333333;
+  display: inline;
+  padding: 0 5px 5px 5px;
+}
+#author-placeholder .author-avatar {
+  float: right;
+}

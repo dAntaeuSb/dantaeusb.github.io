@@ -1,0 +1,29 @@
+article.reason {
+  width: 490px;
+}
+article.reason header {
+  padding: 20px 0;
+}
+article.reason header h2 {
+  font-size: 48px;
+  line-height: 1.5;
+}
+article.reason .article-content {
+  background: #cbc1b7;
+  color: #333333;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-left: -40px;
+  width: 100%;
+}
+article.reason .article-content .text-block {
+  padding: 40px;
+}
+article.reason .article-content .image-attachment {
+  padding: 0;
+  width: 100%;
+}
+article.reason .article-content .image-attachment img {
+  width: 100%;
+}
