@@ -67,9 +67,11 @@ document.addEventListener("DOMContentLoaded", function (e) {
         })();
     });
     d3.select(".image-attachment").on("click", function (e) {
+        d3.select("#bg-video").node().pause();
         d3.select("#overlay-1").style("display", "block");
     });
     d3.select(".overlay-close").on("click", function (e) {
+        d3.select("#bg-video").node().play();
         d3.select("#overlay-1").style("display", "none");
     });
 });
