@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
             var content = d3.select("#content");
             var summaryOffset = 0;
             var bounceIntervalId = false;
+            var contentHeight = parseInt(content.select(".inner-wrapper").style("height"));
             window.addEventListener("wheel", function (e) {
                 if (summaryOffset != 0) {
                     summaryOffset -= e.deltaY;
                 }
-                if (content.node().scrollTop >= (parseInt(content.style("height")) - window.innerHeight)) {
+                if (content.node().scrollTop >= (contentHeight - window.innerHeight)) {
                     if (summaryOffset == 0) {
                         summaryOffset = e.deltaY;
                     }
@@ -47,15 +48,16 @@ document.addEventListener("DOMContentLoaded", function (e) {
                                 iconDocument.select("#scroll-arrow-3").attr("fill-opacity", 1);
                                 iconDocument.select("#scroll-arrow-2").attr("fill-opacity", 1);
                                 iconDocument.select("#scroll-arrow-1").attr("fill-opacity", 1);
+                                alert("next");
                             }
                             d3.select("#content .reason").style("transform", "translateY(" + summaryOffset + "px)");
                             summaryOffset = Math.round(summaryOffset / 2);
-                            if (Math.abs(summaryOffset) <= 1) {
+                            if (summaryOffset >= -1) {
                                 console.log(summaryOffset + "end " + bounceIntervalId);
                                 summaryOffset = 0;
                                 clearInterval(bounceIntervalId);
                                 bounceIntervalId = false;
-                                d3.select("#content .reason").style("transform", false);
+                                d3.select("#content .reason").style("transform", "translateY(0px)");
                             }
                         }, 100);
                         console.warn(bounceIntervalId);
@@ -63,6 +65,12 @@ document.addEventListener("DOMContentLoaded", function (e) {
                 }
             });
         })();
+    });
+    d3.select(".image-attachment").on("click", function (e) {
+        d3.select("#overlay-1").style("display", "block");
+    });
+    d3.select(".overlay-close").on("click", function (e) {
+        d3.select("#overlay-1").style("display", "none");
     });
 });
 //# sourceMappingURL=scroll.js.map

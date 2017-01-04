@@ -5,7 +5,7 @@
   left: 0;
   height: 80px;
   width: 100%;
-  z-index: 100;
+  z-index: 110;
 }
 #scroll-helper .scroll-helper-bg {
   background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
@@ -33,9 +33,10 @@
 #scroll-helper .scroll-helper-content {
   margin-left: -40px;
   position: absolute;
+  opacity: .75;
   text-align: center;
   width: 490px;
-  z-index: 101;
+  z-index: 111;
 }
 #scroll-helper .scroll-helper-content .desc {
   padding-top: 5px;
