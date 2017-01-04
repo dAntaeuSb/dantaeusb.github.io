@@ -1,5 +1,6 @@
 article.reason {
-  padding-bottom: 80px;
+  padding-bottom: 90px;
+  transition: transform .1s linear;
   width: 490px;
 }
 article.reason header {

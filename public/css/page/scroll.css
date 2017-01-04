@@ -33,7 +33,6 @@
 #scroll-helper .scroll-helper-content {
   margin-left: -40px;
   position: absolute;
-  opacity: .75;
   text-align: center;
   width: 490px;
   z-index: 101;

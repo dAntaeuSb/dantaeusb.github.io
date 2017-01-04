@@ -56,7 +56,6 @@
 #scroll-helper .scroll-helper-content {
   margin-left: -40px;
   position: absolute;
-  opacity: .75;
   text-align: center;
   width: 490px;
   z-index: 101;
@@ -67,7 +66,13 @@
 #content {
   box-sizing: border-box;
   margin: 0 auto;
+  overflow-y: scroll;
   padding: 0 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   max-width: 1440px;
   width: 100%;
 }
@@ -106,7 +111,8 @@
   float: right;
 }
 article.reason {
-  padding-bottom: 80px;
+  padding-bottom: 90px;
+  transition: transform .1s linear;
   width: 490px;
 }
 article.reason header {
@@ -212,8 +218,14 @@ article.reason .article-content .article-status.after-text {
   background: #eee;
   border-top: 1px solid #ddd;
 }
+html {
+  overflow: hidden;
+  height: 100%;
+}
 body {
   background: #000;
   color: #fff;
   font-family: 'Roboto', sans-serif;
+  height: 100%;
+  overflow: auto;
 }
