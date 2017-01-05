@@ -1,7 +1,7 @@
 article.reason {
   padding-bottom: 90px;
   transition: transform .1s linear;
-  width: 490px;
+  width: 520px;
 }
 article.reason header {
   padding: 20px 0;
@@ -68,6 +68,16 @@ article.reason .article-content .image-attachment.photo .controls-overlay .contr
   left: 0;
   right: 0;
 }
+article.reason .article-content .image-attachment.art .controls-overlay .controls .zoom-icon,
+article.reason .article-content .image-attachment.photo .controls-overlay .controls .zoom-icon {
+  height: 40px;
+  width: 40px;
+}
+article.reason .article-content .image-attachment.art .controls-overlay .controls .zoom-icon img,
+article.reason .article-content .image-attachment.photo .controls-overlay .controls .zoom-icon img {
+  height: 40px;
+  width: 40px;
+}
 article.reason .article-content .image-attachment.art .controls-overlay .controls .icon-desc,
 article.reason .article-content .image-attachment.photo .controls-overlay .controls .icon-desc {
   font-size: 20px;
@@ -75,7 +85,7 @@ article.reason .article-content .image-attachment.photo .controls-overlay .contr
 }
 article.reason .article-content .article-status {
   font-family: 'Roboto', sans-serif;
-  height: 48px;
+  height: 50px;
   padding: 0 20px;
   overflow: hidden;
 }
@@ -90,13 +100,13 @@ article.reason .article-content .article-status .status-item:hover {
   background: #eee;
 }
 article.reason .article-content .article-status .status-item .icon {
-  cursor: pointer;
-  margin-right: 10px;
+  padding-top: 2px;
 }
 article.reason .article-content .article-status .status-item .status-item-info {
   display: inline-block;
   float: right;
-  padding-top: 2px;
+  line-height: 36px;
+  margin-left: 10px;
 }
 article.reason .article-content .article-status .comments {
   float: right;

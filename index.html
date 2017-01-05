@@ -7,18 +7,20 @@
     <link href="public/css/main.css" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <script type="application/javascript" src="public/js/lib/d3.min.js"></script>
+    <script type="application/javascript" src="public/js/lib/colorcolor.min.js"></script>
     <script type="application/javascript" src="public/js/scroll.js"></script>
+    <script type="application/javascript" src="public/js/everythingisburning.js"></script>
 </head>
 <body class="dark">
 <div id="header" class="main-header">
     <div id="header-logo-x">
-        <object type="image/svg+xml" data="public/images/x.svg">{X}</object>
+        <object id="header-logo-x-object" type="image/svg+xml" data="public/images/x.svg">{X}</object>
     </div>
 </div>
 
 <div id="author-placeholder">
     <div class="author-content-wrap">
-        <div class="author-identity">from <div class="author-name">Valeria Zhuravlyova</div></div>
+        <div class="author-identity"><div class="author-name">Valeria Zhuravlyova</div></div>
         <div class="author-avatar">
             <img src="public/attachments/images/valeria-avatar.jpg" />
         </div>
@@ -29,7 +31,7 @@
     <div class="inner-wrapper">
         <article class="reason">
             <header>
-                <h2>The reason is X<br />line more</h2>
+                <h2>Inspiration for creativity</h2>
             </header>
             <div class="article-content">
                 <div class="text-block">
@@ -40,7 +42,7 @@
                     <div class="controls-overlay">
                         <div class="controls">
                             <i class="zoom-icon">
-                                <object type="image/svg+xml" data="public/images/zoom.svg"></object>
+                                <img src="public/images/zoom.svg" />
                             </i>
                             <div class="icon-desc">
                                 zoom art
@@ -51,11 +53,11 @@
                 </div>
                 <div class="article-status">
                     <div class="status-item views">
-                        <object class="icon" type="image/svg+xml" data="public/images/eye.svg"></object>
+                        <img class="icon" src="public/images/eye.svg" />
                         <span class="status-item-info">172</span>
                     </div>
                     <div class="status-item comments">
-                        <object class="icon" type="image/svg+xml" data="public/images/bubble.svg"></object>
+                        <img class="icon" src="public/images/bubble.svg" />
                         <span class="status-item-info">3</span>
                     </div>
                 </div>

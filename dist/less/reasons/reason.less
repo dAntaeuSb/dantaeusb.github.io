@@ -1,11 +1,11 @@
-@import "../colors";
+@import "../variables";
 
 @bgcolor: #fff;
 
 article.reason{
   padding-bottom: 90px;
   transition: transform .1s linear;
-  width: 490px;
+  width: @feedWidth;
 
   header{
     padding: 20px 0;
@@ -74,6 +74,13 @@ article.reason{
             right: 0;
 
             .zoom-icon{
+              height: 40px;
+              width: 40px;
+
+              img {
+                height: 40px;
+                width: 40px;
+              }
             }
 
             .icon-desc{
@@ -87,7 +94,7 @@ article.reason{
 
     .article-status{
       font-family: 'Roboto', sans-serif;
-      height: 48px;
+      height: 50px;
       padding: 0 20px;
       overflow: hidden;
 
@@ -103,14 +110,14 @@ article.reason{
         }
 
         .icon{
-          cursor: pointer;
-          margin-right: 10px;
+          padding-top: 2px;
         }
 
         .status-item-info{
           display: inline-block;
           float: right;
-          padding-top: 2px;
+          line-height: 36px;
+          margin-left: 10px;
         }
       }
 
