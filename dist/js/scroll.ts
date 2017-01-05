@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
                     }
 
                     if (bounceIntervalId === false) {
-                        console.warn(bounceIntervalId);
-
                         bounceIntervalId = setInterval(() => {
                             let passPercent = Math.abs(summaryOffset / distanceToNext);
                             const opacityMultipier = Math.abs(1 - defaultArrowOpacity);
@@ -62,15 +60,12 @@ document.addEventListener("DOMContentLoaded", (e) => {
                             summaryOffset = Math.round(summaryOffset / 2);
 
                             if (summaryOffset >= -1) {
-                                console.log(summaryOffset + "end " + bounceIntervalId);
                                 summaryOffset = 0;
                                 clearInterval(bounceIntervalId);
                                 bounceIntervalId = false;
                                 d3.select("#content .reason").style("transform", "translateY(0px)");
                             }
                         }, 100);
-
-                        console.warn(bounceIntervalId);
                     }
                 }
             });
@@ -82,8 +77,18 @@ document.addEventListener("DOMContentLoaded", (e) => {
         d3.select("#overlay-1").style("display", "block");
     });
 
-    d3.select(".overlay-close").on("click", (e) => {
+    d3.select("#overlay-1").select(".overlay-close").on("click", (e) => {
         d3.select("#bg-video").node().play();
         d3.select("#overlay-1").style("display", "none");
+    });
+
+    d3.select(".reason").select(".comments").on("click", (e) => {
+        d3.select("#bg-video").node().pause();
+        d3.select("#overlay-2").style("display", "block");
+    });
+
+    d3.select("#overlay-2").select(".overlay-close").on("click", (e) => {
+        d3.select("#bg-video").node().play();
+        d3.select("#overlay-2").style("display", "none");
     });
 });

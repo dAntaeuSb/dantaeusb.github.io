@@ -1,16 +1,16 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function (e) {
     var xElement = d3.select("#header-logo-x-object");
+    var gaussianRandom = function () {
+        return ((Math.random() + Math.random() + Math.random() + Math.random() + Math.random() + Math.random()) - 3) / 3;
+    };
     var getFireColor = function () {
-        var hueRange = 30, hueStart = 10, brightnessStart = 50, brightnessRange = 50, saturationStart = 77, saturationRange = 10;
-        var hue = parseInt(hueStart + Math.random() * hueRange);
-        var saturation = parseInt(saturationStart + Math.random() * saturationRange);
-        var brightness = parseInt(brightnessStart + Math.random() * brightnessRange);
-        console.log("hsl(" + hue + ", " + saturation + "%, " + brightness + "%)");
-        console.log(colorcolor("hsl(" + hue + ", " + saturation + "%, " + brightness + "%)", "hex"));
+        var hueMedian = 25, hueRange = 30, brightnessMedian = 65, brightnessRange = 25, saturationMedian = 82, saturationRange = 10;
+        var hue = parseInt(hueMedian + gaussianRandom() * hueRange);
+        var saturation = parseInt(saturationMedian + gaussianRandom() * saturationRange);
+        var brightness = parseInt(brightnessMedian + gaussianRandom() * brightnessRange);
         return colorcolor("hsl(" + hue + ", " + saturation + "%, " + brightness + "%)", "hex");
     };
-    console.log('ok!');
     xElement.on("load", function (e) {
         var contentDocument = xElement.node().contentDocument;
         var xSvg = d3.select(contentDocument);

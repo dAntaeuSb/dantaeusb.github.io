@@ -2,26 +2,26 @@ import {color} from "./node_modules/@types/d3/node_modules/@types/d3-color/index
 document.addEventListener("DOMContentLoaded", (e) => {
     let xElement = d3.select("#header-logo-x-object");
 
+    let gaussianRandom = () => {
+        return ((Math.random() + Math.random() + Math.random() + Math.random() + Math.random() + Math.random()) - 3) / 3;
+    };
+
     let getFireColor = () => {
         const
+            hueMedian = 25,
             hueRange = 30,
-            hueStart = 10,
-            brightnessStart = 50,
-            brightnessRange = 50,
-            saturationStart = 77,
+            brightnessMedian = 65,
+            brightnessRange = 25,
+            saturationMedian = 82,
             saturationRange = 10;
 
-        let hue = parseInt(hueStart + Math.random() * hueRange);
-        let saturation = parseInt(saturationStart + Math.random() * saturationRange);
-        let brightness = parseInt(brightnessStart + Math.random() * brightnessRange);
-
-        console.log(`hsl(${hue}, ${saturation}%, ${brightness}%)`);
-        console.log(colorcolor(`hsl(${hue}, ${saturation}%, ${brightness}%)`, "hex"));
+        let hue = parseInt(hueMedian + gaussianRandom() * hueRange);
+        let saturation = parseInt(saturationMedian + gaussianRandom() * saturationRange);
+        let brightness = parseInt(brightnessMedian + gaussianRandom() * brightnessRange);
 
         return colorcolor(`hsl(${hue}, ${saturation}%, ${brightness}%)`, "hex");
     };
 
-    console.log('ok!');
     xElement.on("load", (e) => {
         let contentDocument = xElement.node().contentDocument;
         let xSvg = d3.select(contentDocument);

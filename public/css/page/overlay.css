@@ -23,7 +23,7 @@
 .content-overlay .overlay-close:hover {
   background: rgba(0, 0, 0, 0.5);
 }
-.content-overlay .zoomed-image-wrapper {
+.content-overlay .overlay-content {
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -34,52 +34,69 @@
   margin: 40px 0;
   max-width: 1360px;
 }
-.content-overlay .zoomed-image-wrapper .image img {
+.content-overlay .overlay-content article.comment {
+  border-bottom: 1px solid #eee;
+}
+.content-overlay .overlay-content article.comment:last-child {
+  border-bottom: none;
+}
+.content-overlay .overlay-content article.comment .article-content {
+  padding: 20px;
+  width: 520px;
+}
+.content-overlay .overlay-content article.comment .article-content p {
+  line-height: 1.5;
+  text-indent: 20px;
+  padding: 20px;
+}
+.content-overlay .overlay-content .image img {
   vertical-align: top;
   max-height: 700px;
 }
-.content-overlay .zoomed-image-wrapper .desc {
+.content-overlay .overlay-content .desc {
   font-family: 'Roboto', sans-serif;
   height: 50px;
-  padding: 0 20px;
   overflow: hidden;
 }
-.content-overlay .zoomed-image-wrapper .desc .author .author-avatar {
+.content-overlay .overlay-content .desc .author .author-avatar {
   border-radius: 18px;
   float: left;
   overflow: hidden;
   height: 36px;
   width: 36px;
 }
-.content-overlay .zoomed-image-wrapper .desc .author .author-avatar img {
+.content-overlay .overlay-content .desc .author .author-avatar img {
   height: 36px;
   width: 36px;
 }
-.content-overlay .zoomed-image-wrapper .desc .author .author-desc {
+.content-overlay .overlay-content .desc .author .author-desc {
   line-height: 36px;
   margin-left: 10px;
 }
-.content-overlay .zoomed-image-wrapper .desc .status-item {
+.content-overlay .overlay-content .desc .status-item {
   cursor: pointer;
   font-size: 24px;
   float: right;
   padding: 7px 20px;
   vertical-align: top;
 }
-.content-overlay .zoomed-image-wrapper .desc .status-item:hover {
+.content-overlay .overlay-content .desc .status-item:hover {
   background: #eee;
 }
-.content-overlay .zoomed-image-wrapper .desc .status-item .icon {
+.content-overlay .overlay-content .desc .status-item .icon {
   cursor: pointer;
   padding-top: 2px;
 }
-.content-overlay .zoomed-image-wrapper .desc .status-item .status-item-info {
+.content-overlay .overlay-content .desc .status-item .status-item-info {
   display: inline-block;
   float: right;
   line-height: 36px;
   margin-left: 10px;
 }
-.content-overlay .zoomed-image-wrapper .desc .status-item.author {
+.content-overlay .overlay-content .desc .status-item.author {
   float: left;
   font-size: 16px;
+}
+.content-overlay .overlay-content > .desc {
+  padding: 0 20px;
 }
