@@ -7,11 +7,11 @@
     <link href="public/css/main.css" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <script type="application/javascript" src="public/js/lib/d3.min.js"></script>
+    <script type="application/javascript" src="public/js/lib/ejs.min.js"></script>
     <script type="application/javascript" src="public/js/lib/colorcolor.min.js"></script>
-    <script type="application/javascript" src="public/js/scroll.js"></script>
-    <script type="application/javascript" src="public/js/everythingisburning.js"></script>
 </head>
 <body class="dark">
+<script type="text/javascript" data-main="public/js/reasons.js" src="public/js/lib/require.js"></script>
 <div id="header" class="main-header">
     <div id="header-logo-x">
         <object id="header-logo-x-object" type="image/svg+xml" data="public/images/x.svg">{X}</object>
@@ -20,16 +20,16 @@
 
 <div id="author-placeholder">
     <div class="author-content-wrap">
-        <div class="author-identity"><div class="author-name">Valeria Zhuravlyova</div></div>
-        <div class="author-avatar">
+        <div class="author-identity hidden"><div class="author-name">Valeria Zhuravlyova</div></div>
+        <div class="author-avatar hidden">
             <img src="public/attachments/images/valeria-avatar.jpg" />
         </div>
     </div>
 </div>
 
 <div id="content" class="fixed-content">
-    <div class="inner-wrapper">
-        <article class="reason">
+    <div class="content-wrapper">
+        <article id="reason-1" class="reason" data-id="1">
             <header>
                 <h2>Inspiration for creativity</h2>
             </header>
@@ -160,9 +160,6 @@
 </div>
 
 <div id="bg-wrapper" class="bg">
-    <video autoplay muted loop poster="public/images/videopreload.jpg" id="bg-video">
-        <source src="public/videos/iamxbg.mp4" type="video/mp4">
-    </video>
 </div>
 </body>
 </html>

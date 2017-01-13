@@ -1,25 +1,26 @@
 @import "../variables";
 
-article.reason{
+article.reason {
   padding-bottom: 90px;
   transition: transform .1s linear;
   width: @feedWidth;
+  //max-width: 38.2%;
 
-  header{
+  header {
     padding: 20px 0;
 
-    h2{
+    h2 {
       font-size: 48px;
       font-weight: 700;
-      text-shadow: 0 2px 25px rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.3);
+      text-shadow: 0 2px 25px rgba(0, 0, 0, .15), 0 1px 3px rgba(0, 0, 0, .3);
       line-height: 1.5;
     }
   }
 
-  .article-content{
+  .article-content {
     background: @bg1;
     border-radius: 3px;
-    box-shadow: 0 2px 25px rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.3);
+    box-shadow: 0 2px 25px rgba(0, 0, 0, .15), 0 1px 3px rgba(0, 0, 0, .3);
     color: @text1;
     font-family: "Georgia", "Times New Roman", serif;
     font-size: 18px;
@@ -28,26 +29,38 @@ article.reason{
     margin-left: -40px;
     width: 100%;
 
-    .text-block{
-      padding: 40px;
+    .text-block {
+      text-indent: 20px;
+      padding: 30px 40px;
+
+      p {
+        margin: 10px 0;
+      }
+
+      &:first-child {
+        &:first-letter {
+          color: @accent;
+          font-size: 36px;
+        }
+      }
     }
 
-    .image-attachment{
+    .image-attachment {
       padding: 0;
       margin: 0;
       width: 100%;
 
-      img{
+      img {
         vertical-align: top;
         width: 100%;
       }
 
-      &.art, &.photo{
+      &.art, &.photo {
         cursor: pointer;
         position: relative;
 
-        .controls-overlay{
-          background: rgba(0,0,0,.4);
+        .controls-overlay {
+          background: rgba(0, 0, 0, .4);
           color: #fff;
           font-family: 'Roboto', sans-serif;
           position: absolute;
@@ -61,7 +74,7 @@ article.reason{
           height: 100%;
           width: 100%;
 
-          &:hover{
+          &:hover {
             opacity: 1;
           }
 
@@ -71,7 +84,7 @@ article.reason{
             left: 0;
             right: 0;
 
-            .zoom-icon{
+            .zoom-icon {
               height: 40px;
               width: 40px;
 
@@ -81,7 +94,7 @@ article.reason{
               }
             }
 
-            .icon-desc{
+            .icon-desc {
               font-size: 20px;
               padding: 7px 0;
             }
@@ -90,28 +103,28 @@ article.reason{
       }
     }
 
-    .article-status{
+    .article-status {
       font-family: 'Roboto', sans-serif;
       height: 50px;
       padding: 0 20px;
       overflow: hidden;
 
-      .status-item{
+      .status-item {
         cursor: pointer;
         font-size: 24px;
         float: left;
         padding: 7px 20px;
         vertical-align: top;
 
-        &:hover{
+        &:hover {
           background: #eee;
         }
 
-        .icon{
+        .icon {
           padding-top: 2px;
         }
 
-        .status-item-info{
+        .status-item-info {
           display: inline-block;
           float: right;
           line-height: 36px;
@@ -119,12 +132,28 @@ article.reason{
         }
       }
 
-      .comments{
+      .author {
+        .author-avatar {
+          border-radius: 18px;
+          background-size: cover;
+          float: left;
+          overflow: hidden;
+          height: 36px;
+          width: 36px;
+        }
+
+        .author-desc {
+          line-height: 36px;
+          margin-left: 10px;
+        }
+      }
+
+      .comments {
         float: right;
         margin-right: 0;
       }
 
-      &.after-text{
+      &.after-text {
         background: #eee;
         border-top: 1px solid #ddd;
       }

@@ -6,4 +6,4 @@ var Overlay = (function () {
     }
     return Overlay;
 }());
-//# sourceMappingURL=overlay.js.map
+//# sourceMappingURL=instance.js.map

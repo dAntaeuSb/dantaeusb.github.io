@@ -1,0 +1,23 @@
+{
+  "name": "iamx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dAntaeuSb/dantaeusb.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dAntaeuSb/dantaeusb.github.io/issues"
+  },
+  "homepage": "https://github.com/dAntaeuSb/dantaeusb.github.io",
+  "dependencies": {
+    "@types/sequelize": "^4.0.39",
+    "sequelize": "^3.29.0"
+  }
+}

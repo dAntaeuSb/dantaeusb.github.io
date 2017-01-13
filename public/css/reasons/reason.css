@@ -25,7 +25,15 @@ article.reason .article-content {
   width: 100%;
 }
 article.reason .article-content .text-block {
-  padding: 40px;
+  text-indent: 20px;
+  padding: 30px 40px;
+}
+article.reason .article-content .text-block p {
+  margin: 10px 0;
+}
+article.reason .article-content .text-block:first-child:first-letter {
+  color: #f08c64;
+  font-size: 36px;
 }
 article.reason .article-content .image-attachment {
   padding: 0;
@@ -105,6 +113,18 @@ article.reason .article-content .article-status .status-item .icon {
 article.reason .article-content .article-status .status-item .status-item-info {
   display: inline-block;
   float: right;
+  line-height: 36px;
+  margin-left: 10px;
+}
+article.reason .article-content .article-status .author .author-avatar {
+  border-radius: 18px;
+  background-size: cover;
+  float: left;
+  overflow: hidden;
+  height: 36px;
+  width: 36px;
+}
+article.reason .article-content .article-status .author .author-desc {
   line-height: 36px;
   margin-left: 10px;
 }

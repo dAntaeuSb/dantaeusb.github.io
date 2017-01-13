@@ -1,7 +1,11 @@
 /*jshint esversion: 6 */
 function colorcolor(color, newColor, calculateOpacity) {
-    if (newColor === void 0) { newColor = "rgba"; }
-    if (calculateOpacity === void 0) { calculateOpacity = false; }
+    if (newColor === void 0) {
+        newColor = "rgba";
+    }
+    if (calculateOpacity === void 0) {
+        calculateOpacity = false;
+    }
     color = color.toLowerCase();
     newColor = newColor.toLowerCase();
     var returnedColor = color;
@@ -338,4 +342,5 @@ function toPercent(amount, limit) {
 }
 module.exports = colorcolor;
 global.colorcolor = module.exports; /* ew */
+//# sourceMappingURL=colorcolor.js.map 
 //# sourceMappingURL=colorcolor.js.map

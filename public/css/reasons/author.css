@@ -16,6 +16,7 @@
   font-size: 48px;
   text-align: right;
   line-height: 1.5;
+  transition: transform .5s ease, opacity .5s ease;
 }
 #author-placeholder .author-identity .author-name {
   background: #ffffff;
@@ -23,6 +24,19 @@
   display: inline;
   padding: 0 5px 5px 5px;
 }
+#author-placeholder .author-identity:hover {
+  background: #333333;
+  color: #ffffff;
+}
+#author-placeholder .author-identity.hidden {
+  opacity: 0;
+  transform: translateX(300px);
+}
 #author-placeholder .author-avatar {
   float: right;
+  transition: transform .5s ease, opacity .5s ease;
+}
+#author-placeholder .author-avatar.hidden {
+  opacity: 0;
+  transform: translateX(150px);
 }

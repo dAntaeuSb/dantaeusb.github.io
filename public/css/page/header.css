@@ -8,4 +8,17 @@
   top: 20px;
   left: 50%;
   margin-left: -50px;
+  transition: margin .5s ease, top .5s ease;
+}
+#header-logo-x.loading {
+  top: 50%;
+  margin-top: -45px;
+  margin-left: -70px;
+}
+#header-logo-x.loading #header-logo-x-object {
+  width: 140px;
+}
+#header-logo-x-object {
+  transition: height .5s ease, width .5s ease;
+  width: 100px;
 }

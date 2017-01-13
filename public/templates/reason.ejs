@@ -1,0 +1,50 @@
+<article class="reason">
+    <header>
+        <h2><%= reason.header %></h2>
+    </header>
+    <div class="article-content">
+        <% for(var part in reason.contents) {
+            var contentPart = reason.contents[part];
+
+            switch(contentPart.type) {
+            case "text": %>
+                <div class="text-block">
+                    <%- reason.contents[part].content %>
+                </div>
+        <%
+                break;
+            case "image": %>
+                <div class="image-attachment art">
+                    <div class="controls-overlay">
+                        <div class="controls">
+                            <i class="zoom-icon">
+                                <img src="public/images/zoom.svg" />
+                            </i>
+                            <div class="icon-desc">
+                                zoom art
+                            </div>
+                        </div>
+                    </div>
+                    <img src="<%= contentPart.uri %>"/>
+                </div>
+        <%
+                break;
+            case "video":
+
+                break;
+            }
+        } %>
+        <div class="article-status">
+            <div class="status-item views">
+                <img class="icon" src="public/images/eye.svg" />
+                <span class="status-item-info"><%= reason.views %></span>
+            </div>
+            <% if(reason.comments && reason.comments.length > 0) { %>
+            <div class="status-item comments">
+                <img class="icon" src="public/images/bubble.svg" />
+                <span class="status-item-info">3</span>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</article>

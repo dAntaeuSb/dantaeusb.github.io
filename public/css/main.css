@@ -8,6 +8,19 @@
   top: 20px;
   left: 50%;
   margin-left: -50px;
+  transition: margin .5s ease, top .5s ease;
+}
+#header-logo-x.loading {
+  top: 50%;
+  margin-top: -45px;
+  margin-left: -70px;
+}
+#header-logo-x.loading #header-logo-x-object {
+  width: 140px;
+}
+#header-logo-x-object {
+  transition: height .5s ease, width .5s ease;
+  width: 100px;
 }
 #bg-wrapper {
   opacity: .75;
@@ -67,11 +80,6 @@
 }
 #content {
   box-sizing: border-box;
-  margin: 0 auto;
-  overflow-y: scroll;
-  padding: 0 80px;
-  max-width: 1440px;
-  width: 100%;
 }
 #content.fixed-content {
   position: fixed;
@@ -218,6 +226,7 @@
   font-size: 48px;
   text-align: right;
   line-height: 1.5;
+  transition: transform .5s ease, opacity .5s ease;
 }
 #author-placeholder .author-identity .author-name {
   background: #ffffff;
@@ -225,8 +234,21 @@
   display: inline;
   padding: 0 5px 5px 5px;
 }
+#author-placeholder .author-identity:hover {
+  background: #333333;
+  color: #ffffff;
+}
+#author-placeholder .author-identity.hidden {
+  opacity: 0;
+  transform: translateX(300px);
+}
 #author-placeholder .author-avatar {
   float: right;
+  transition: transform .5s ease, opacity .5s ease;
+}
+#author-placeholder .author-avatar.hidden {
+  opacity: 0;
+  transform: translateX(150px);
 }
 article.reason {
   padding-bottom: 90px;
@@ -255,7 +277,15 @@ article.reason .article-content {
   width: 100%;
 }
 article.reason .article-content .text-block {
-  padding: 40px;
+  text-indent: 20px;
+  padding: 30px 40px;
+}
+article.reason .article-content .text-block p {
+  margin: 10px 0;
+}
+article.reason .article-content .text-block:first-child:first-letter {
+  color: #f08c64;
+  font-size: 36px;
 }
 article.reason .article-content .image-attachment {
   padding: 0;
@@ -335,6 +365,18 @@ article.reason .article-content .article-status .status-item .icon {
 article.reason .article-content .article-status .status-item .status-item-info {
   display: inline-block;
   float: right;
+  line-height: 36px;
+  margin-left: 10px;
+}
+article.reason .article-content .article-status .author .author-avatar {
+  border-radius: 18px;
+  background-size: cover;
+  float: left;
+  overflow: hidden;
+  height: 36px;
+  width: 36px;
+}
+article.reason .article-content .article-status .author .author-desc {
   line-height: 36px;
   margin-left: 10px;
 }
